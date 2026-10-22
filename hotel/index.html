@@ -1,1 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+  name="description"
+  content="Discover thoughtful hospitality, elegant rooms, and memorable stays at Luma Grand Hotel."
+  >
+  <title>Luma Grand Hotel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/menu.js" defer></script>
+  <script src="js/room-gallery.js" defer></script>
+</head>
+<body class="site-page">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#home" class="site-brand">
+        LUMA <span class="site-brand__subname">GRAND</span>
+      </a>
+
+      <div id="primary-navigation" class="site-nav__links">
+        <a href="#home" class="site-nav__link">Home</a>
+        <a href="#rooms" class="site-nav__link">Rooms</a>
+        <a href="#services" class="site-nav__link">Services</a>
+        <a href="#about" class="site-nav__link">About</a>
+        <a href="#gallery" class="site-nav__link">Gallery</a>
+        <a href="#contact" class="site-nav__link">Contact</a>
+      </div>
+
+      <a href="#booking" class="site-nav__book">Book Now</a>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <svg class="menu-toggle__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <img
+        src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=2000&q=85"
+        alt="Elegant hotel room"
+        class="hero__image"
+        loading="eager"
+      />
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow">Welcome to Luma Grand</p>
+        <h1 class="hero__title">Stay Somewhere Extraordinary.</h1>
+        <p class="hero__description">
+          Experience comfort, elegance, and exceptional hospitality in the heart of the city.
+        </p>
+        <div class="hero__actions">
+        <a href="#booking" class="hero__button hero__button--outline">Book Your Stay</a>
+        <a href="#rooms" class="hero__button hero__button--gold">Explore Our Rooms</a>
+        </div>
+
+        <form id="booking" action="#" method="get" class="booking-form">
+          <div class="booking-form__field">
+            <label for="check-in" class="field-label">Check-in</label>
+            <input id="check-in" name="check_in" type="date" required class="field-control">
+          </div>
+
+          <div class="booking-form__field">
+            <label for="check-out" class="field-label">Check-out</label>
+            <input id="check-out" name="check_out" type="date" required class="field-control">
+          </div>
+
+          <div class="booking-form__field">
+            <label for="guests" class="field-label">Guests</label>
+            <select id="guests" name="guests" class="field-control">
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+            </select>
+          </div>
+
+          <button type="submit" class="booking-form__submit">Check Availability</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="rooms" class="page-section page-section--rooms">
+      <div class="site-container">
+        <div class="section-heading">
+          <p class="eyebrow section-heading__eyebrow">Rest, recharge, and feel at home</p>
+          <h2 class="section-heading__title">Rooms &amp; Suites</h2>
+          <p class="section-heading__description">
+            Thoughtful details, restful spaces, and warm hospitality make every stay special.
+          </p>
+        </div>
+
+        <div class="room-grid">
+          <article class="room-card">
+            <div class="room-card__gallery" data-room-gallery role="region" aria-label="Deluxe King Room photos">
+              <div class="room-card__image-viewport" data-gallery-viewport>
+                <div class="room-card__image-track">
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=2000&q=85"
+                      alt="Bright, elegantly furnished hotel room"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1772476361154-e894ba10d757?auto=format&fit=crop&w=1200&q=85"
+                      alt="A neatly made bed in a modern hotel room"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                   <div class="room-card__image-slide">
+                    <img
+                      src="https://i.pinimg.com/736x/76/9d/70/769d70ebd19505c84ec2e665d697136c.jpg"
+                      alt="A neatly made bed in a modern hotel room"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://i.pinimg.com/736x/f0/88/47/f0884751be17b353c7e1c230369a86a5.jpg"
+                      alt="A neatly made bed in a modern hotel room"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button class="room-card__gallery-arrow room-card__gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous photo">‹</button>
+              <button class="room-card__gallery-arrow room-card__gallery-arrow--next" type="button" data-gallery-next aria-label="Next photo">›</button>
+              <div class="room-card__gallery-dots" data-gallery-dots aria-label="Choose a room photo"></div>
+            </div>
+            <div class="room-card__body">
+              <h3 class="room-card__title">Deluxe King Room</h3>
+              <p class="room-card__description">Extra space to relax, with elegant details for a comfortable stay.</p>
+              <p class="room-card__price">$120/night</p>
+              <a href="#booking" class="room-card__link">Check Availability <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="room-card__gallery" data-room-gallery role="region" aria-label="Executive Suite photos">
+              <div class="room-card__image-viewport" data-gallery-viewport>
+                <div class="room-card__image-track">
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=85"
+                      alt="Spacious hotel suite with refined furnishings"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1776763018972-588e27bf6511?auto=format&fit=crop&w=1200&q=85"
+                      alt="A luxurious hotel room with a king bed and seating area"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://i.pinimg.com/1200x/eb/c6/1f/ebc61f3b83f613e7d39811c6dc09fb13.jpg"
+                      alt="A luxurious hotel room with a king bed and seating area"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                    <div class="room-card__image-slide">
+                    <img
+                      src="https://i.pinimg.com/736x/34/ca/40/34ca40b4fa34e89ba1ad8e41f3b951e4.jpg"
+                      alt="A luxurious hotel room with a king bed and seating area"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+
+                </div>
+              </div>
+              <button class="room-card__gallery-arrow room-card__gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous photo">‹</button>
+              <button class="room-card__gallery-arrow room-card__gallery-arrow--next" type="button" data-gallery-next aria-label="Next photo">›</button>
+              <div class="room-card__gallery-dots" data-gallery-dots aria-label="Choose a room photo"></div>
+            </div>
+            <div class="room-card__body">
+              <h3 class="room-card__title">Executive Suite</h3>
+              <p class="room-card__description">A spacious escape with a little extra room for a memorable visit.</p>
+              <p class="room-card__price">$180/night</p>
+              <a href="#booking" class="room-card__link">Check Availability <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="room-card__gallery" data-room-gallery role="region" aria-label="Presidential Suite photos">
+              <div class="room-card__image-viewport" data-gallery-viewport>
+                <div class="room-card__image-track">
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1702675301342-cac2dc3ef15a?w=1200&auto=format&fit=crop&q=85"
+                      alt="Comfortable presidential hotel suite"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1675409145919-277c0fc2aa7d?auto=format&fit=crop&w=1200&q=85"
+                      alt="A hotel bedroom with a large bed and a wide window"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://i.pinimg.com/1200x/72/b6/a3/72b6a36e435ae43b0bdc7d7fd8b41e9e.jpg"
+                      alt="Comfortable presidential hotel suite"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="room-card__image-slide">
+                    <img
+                      src="https://i.pinimg.com/736x/b8/fa/6c/b8fa6ce1f96d4c894a04c8ae20b2d136.jpg"
+                      alt="Comfortable presidential hotel suite"
+                      class="room-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button class="room-card__gallery-arrow room-card__gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous photo">‹</button>
+              <button class="room-card__gallery-arrow room-card__gallery-arrow--next" type="button" data-gallery-next aria-label="Next photo">›</button>
+              <div class="room-card__gallery-dots" data-gallery-dots aria-label="Choose a room photo"></div>
+            </div>
+            <div class="room-card__body">
+              <h3 class="room-card__title">Presidential Suite</h3>
+              <p class="room-card__description">A restful room with thoughtful comforts for a relaxing stay.</p>
+              <p class="room-card__price">$320/night</p>
+              <a href="#booking" class="room-card__link">Check Availability <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="page-section page-section--services">
+      <div class="site-container">
+        <div class="section-heading section-heading--service">
+          
+       
+          <p class="eyebrow section-heading__eyebrow">The Luma experience</p>
+          <h2 class="section-heading__title">Thoughtful service, at every turn</h2>
+          <p class="section-heading__description">
+            From a slow morning to an evening in the city, our team makes every part of your stay feel effortless.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3 class="service-card__title">Spa &amp; Wellness</h3>
+            <p class="service-card__description">Relax with restorative spa treatments, a tranquil sauna, and a fully equipped fitness studio, with tailored wellness experiences available throughout your stay.</p>
+          </article>
+
+          <article class="service-card">
+            <h3 class="service-card__title">Personal Concierge</h3>
+            <p class="service-card__description">Our concierge team is available around the clock to arrange dining, local experiences, transport, and the thoughtful details that make your visit your own.</p>
+          </article>
+
+          <article class="service-card">
+            <h3 class="service-card__title">Private Airport Transfers</h3>
+            <p class="service-card__description">Arrive in comfort with a private pickup coordinated to your flight. We can also arrange return journeys and chauffeur-driven transport during your stay.</p>
+          </article>
+
+          <article class="service-card">
+            <h3 class="service-card__title">Signature Dining</h3>
+            <p class="service-card__description">Discover Ethiopian flavors and international favorites made with seasonal ingredients, alongside relaxed breakfasts, attentive in-room dining, and a considered selection of wines and cocktails.</p>
+          </article>
+
+          <article class="service-card">
+            <h3 class="service-card__title">24-Hour Guest Services</h3>
+            <p class="service-card__description">From a late check-in to an early departure, our team is here day and night to help with housekeeping, room requests, wake-up calls, and anything else you need.</p>
+            </article>
+        </div>
+      </div>
+    </section>
+
+<section id="about" class="page-section page-section--about">
+  <div class="site-container about-layout">
+    <div class="about-content">
+      <p class="eyebrow section-heading__eyebrow">About Luma Grand</p>
+      <h2 class="section-heading__title">Lakeside luxury, rooted in Ethiopia</h2>
+
+      <p class="about-copy">
+        Luma Grand sits on the shore of Lake Tana, where calm water, local culture, and genuine hospitality define every stay.
+      </p>
+      <p class="about-copy">
+        one or two confirmed details about the hotel experience, such as its Ethiopian design touches, Lake Tana activities, or locally inspired dining.
+      </p>
+
+      <dl class="about-facts" aria-label="Luma Grand at a glance">
+        <div class="about-fact">
+          <dt>Guest rooms</dt>
+          <dd>20</dd>
+        </div>
+        <div class="about-fact">
+          <dt>Welcoming guests since</dt>
+          <dd>1997 E.C</dd>
+        </div>
+        <div class="about-fact">
+          <dt>Guest rating</dt>
+          <dd>4.5/5</dd>
+        </div>
+      </dl>
+
+      <ul class="about-highlights" aria-label="What makes a stay at Luma Grand special">
+        <li class="about-highlight">
+          <span class="about-highlight__number" aria-hidden="true">01</span>
+          <div>
+          <h3 class="about-highlight__title">Rooms made for a restful stay</h3>
+          <p class="about-highlight__copy"> confirmed room sizes, bed types, views, or signature amenities.</p>
+          </div>
+        </li>
+        <li class="about-highlight">
+          <span class="about-highlight__number" aria-hidden="true">02</span>
+          <div>
+          <h3 class="about-highlight__title">Thoughtful help throughout your stay</h3>
+          <p class="about-highlight__copy"> confirmed services, such as concierge hours, airport transfers, or Lake Tana excursions.</p>
+          </div>
+        </li>
+        <li class="about-highlight">
+          <span class="about-highlight__number" aria-hidden="true">03</span>
+          <div>
+          <h3 class="about-highlight__title">A taste of Ethiopia</h3>
+          <p class="about-highlight__copy"> confirmed restaurant details, local dishes, or coffee ceremony information.</p>
+          </div>
+        </li>
+      </ul>
+
+      <a href="#booking" class="about-link">Book your stay <span aria-hidden="true">→</span></a>
+    </div>
+
+    <figure class="about-visual">
+      <img
+        src="https://media.gettyimages.com/id/453369028/photo/ethiopia-bahar-dar-lake-tana-pelicans.webp?s=2048x2048&w=gi&k=20&c=u98x7X9MAimIpeB-MxUpWgUMfkW3mNP9EmkpA6QNp6g="
+        alt="Pelicans on the waters of Lake Tana"
+        class="about-image"
+      />
+      <figcaption class="about-image-caption">
+        <span class="about-image-caption__mark" aria-hidden="true">L</span>
+        <span>
+          <strong class="about-image-caption__title">Your retreat</strong>
+          <span class="about-image-caption__copy">Comfort with a sense of place</span>
+        </span>
+      </figcaption>
+    </figure>
+
+    
+  </div>
+</section>
+
+   <section id="gallery" class="page-section page-section--gallery">
+      <div class="site-container">
+        <div class="section-heading section-heading--gallery">
+          <p class="eyebrow section-heading__eyebrow">A closer look</p>
+          <h2 class="section-heading__title">Spaces made for slowing down</h2>
+          <p class="section-heading__description">
+            Explore the thoughtful details, welcoming spaces, and little moments that make a stay at Luma Grand feel special.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Replace each sample Unsplash image URL and update its alt text to match your chosen photo. -->
+
+          <figure  class="gallery-item gallery-item--feature">
+            
+            <img 
+              src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=85"
+              alt="A softly lit hotel suite with a neatly made bed"
+              class="gallery-item__image"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="gallery-item__caption">
+              <span class="gallery-item__category">Stay</span>
+              <h3 class="gallery-item__title">Room to unwind</h3>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item gallery-item--side">
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+              alt="An elegant restaurant table set for dinner"
+              class="gallery-item__image"
+              loading="lazy"
+            />
+            <figcaption class="gallery-item__caption">
+              <span class="gallery-item__category">Dine</span>
+              <h3 class="gallery-item__title">Gather around the table</h3>
+            </figcaption>
+          </figure>
+
+
+          <figure class="gallery-item gallery-item--side">
+            <img
+              src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85"
+              alt="A peaceful spa space prepared for a treatment"
+              class="gallery-item__image"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="gallery-item__caption">
+              <span class="gallery-item__category">Unwind</span>
+              <h3 class="gallery-item__title">Make time to reset</h3>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item gallery-item--wide">
+            <img
+              src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1000&q=85"
+              alt="Distinctive city architecture in warm evening light"
+              class="gallery-item__image"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="gallery-item__caption">
+              <span class="gallery-item__category">Explore</span>
+              <h3 class="gallery-item__title">The city within reach</h3>
+           </figcaption>
+          </figure>
+
+
+          <figure class="gallery-item gallery-item--wide">
+            <img
+              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85"
+              alt="Warm neutral tones and carefully chosen interior details"
+              class="gallery-item__image"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="gallery-item__caption">
+              <span class="gallery-item__category">The details</span>
+              <h3 class="gallery-item__title">Considered in every corner</h3>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+ <section id="contact" class="page-section page-section--contact">
+      <div class="site-container">
+        <div class="section-heading contact-heading">
+          <p class="eyebrow section-heading__eyebrow">We’re here to help</p>
+          <h2 class="section-heading__title">Find your way to Luma</h2>
+          <p class="section-heading__description">
+            Contact our reception team or check back for location details as you plan your stay.
+          </p>
+        </div>
+
+      <div class="contact-layout">
+          <div class="contact-card">
+            <p class="contact-card__eyebrow">Get in touch</p>
+            <h3 class="contact-card__title">Reception is ready to assist</h3>
+            <p class="contact-card__intro">
+              Reach out with questions about your stay, arrival, or the hotel.
+            </p>
+
+            <dl class="contact-details">
+              <div class="contact-detail">
+                <dt class="contact-detail__label">Call reception</dt>
+                <dd class="contact-detail__value">
+                  <!-- Replace the placeholder number in both the link and visible text. -->
+                  <a class="contact-detail__link" href="tel:+00000000000">
+                    +215934567800 
+                  </a>
+                </dd>
+              </div>
+             <div class="contact-detail">
+                <dt class="contact-detail__label">Email us</dt>
+                <dd class="contact-detail__value">
+                  <!-- Replace with the hotel's real reception email. -->
+                  <a class="contact-detail__link" href="mailto:reception@example.com">
+                    reception@example.com
+                  </a>
+                </dd>
+              </div>
+
+              <div class="contact-detail">
+                <dt class="contact-detail__label">Visit us</dt>
+                <dd class="contact-detail__value">
+                  <address>Lake Tana, Bahir Dar, Ethiopia</address>
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+        <div class="contact-location">
+            <div class="location-map">
+              <iframe
+                title="Map of Lake Tana in Bahir Dar, Ethiopia"
+                src="https://www.google.com/maps?q=Lake+Tana,+Bahir+Dar,+Ethiopia&amp;output=embed"
+                loading="eager"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+              <p class="location-map__note">
+                <span class="location-map__label">Approximate area</span>
+                <strong>Lake Tana, Bahir Dar, Ethiopia</strong>
+              </p>
+            </div>
+
+            <div class="contact-directions">
+              <p class="contact-directions__copy">
+                The map shows the Lake Tana area. Update it with the hotel's exact address when confirmed.
+              </p>
+
+              <a
+                class="contact-directions__link"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Lake+Tana%2C+Bahir+Dar%2C+Ethiopia"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get directions <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+<footer class="site-footer">
+  <div class="site-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="footer-grid__detail">
+          LUMA <span>GRAND</span>
+        </a>
+        <h2 class="footer-grid__title">Welcome to Luma Grand</h2>
+        <p class="footer-grid__description">
+          Thoughtful hospitality, calm spaces, and a central address for discovering the city.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h2 class="footer-column__title">Explore</h2>
+        <ul class="footer-nav__list">
+          <li><a href="#home" class="footer-nav__link">Home</a></li>
+          <li><a href="#rooms" class="footer-nav__link">Rooms</a></li>
+          <li><a href="#services" class="footer-nav__link">Services</a></li>
+          <li><a href="#about" class="footer-nav__link">About</a></li>
+          <li><a href="#gallery" class="footer-nav__link">Gallery</a></li>
+          <li><a href="#contact" class="footer-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h2 class="footer-column__title">Contact reception</h2>
+        <address class="footer-contact__details">
+          <!-- Replace these placeholders with the hotel's real details. -->
+          <a href="tel:+00000000000" class="footer-nav__link">
+            +00 000 000 0000
+          </a>
+          <a href="mailto:reception@example.com" class="footer-nav__link">
+            reception@example.com
+          </a>
+          <span>Hotel address to be confirmed</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <small>&copy; 2026 Luma Grand Hotel. All rights reserved.</small>
+      <a href="#home" class="footer-backtop">
+        Back to top <span aria-hidden="true">↑</span>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
 
